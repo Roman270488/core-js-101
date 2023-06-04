@@ -114,7 +114,7 @@ function removeLeadingAndTrailingWhitespaces(value) {
  */
 function repeatString(value, count) {
   const newArr = [];
-  for (let i = 0; i < count; i++) {
+  for (let i = 0; i < count; i += 1) {
     newArr.push(value);
   }
   return newArr.join('');
@@ -210,12 +210,12 @@ function extractEmails(str) {
  */
 function getRectangleString(width, height) {
   let newStr = '';
-  for (let i = 1; i <= height; i++) {
+  for (let i = 1; i <= height; i += 1) {
     if (i === 1) newStr += '┌';
     if (i === height) newStr += '└';
     if (i > 1 && i <= height - 1) newStr += '│';
 
-    for (let k = 1; k < width - 1; k++) {
+    for (let k = 1; k < width - 1; k += 1) {
       if (i === 1 || i === height) newStr += '─';
       else newStr += ' ';
     }
